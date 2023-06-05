@@ -1,5 +1,5 @@
 default:
-	type -P rake && rake || echo "command: rake not found..."
+	type -P rake && rake || echo "command: rake not found...\nTrying: 'gem install rake'" && gem install rake
 	$(MAKE) file_check
 file_check:
 	type -P file && file build-arm/libStaticLibDemo.a
